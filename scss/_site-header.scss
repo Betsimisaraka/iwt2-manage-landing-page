@@ -1,0 +1,52 @@
+.site_header {
+    position: absolute;
+    // display: flex;
+    // flex-direction: row;
+    // align-items: center;
+    // justify-content: space-between;
+}
+
+h1 {
+    position: absolute;
+    top: 20%;
+    left: 0%;
+    background-image: url('../images/logo.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    display: block;
+    text-indent: -9999px;
+}
+
+.site_header__menu {
+    background-image: url('../images/icon-hamburger.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    text-indent: -9999px;
+    position: absolute;
+    top: 20%;
+    left: 190%;
+    width: 2rem;
+    height: 2rem;
+}
+
+.site_header__button {
+    display: none;
+}
+
+.navigation {
+    transform: translate(-200px);
+}
+
+body > input[type="checkbox"] {
+    position: absolute;
+    top: 0%;
+    left: 80%;
+    visibility: hidden;
+}
+
+body > input[type="checkbox"]:checked ~ header .navigation {
+    transform: translate(0%);
+}
+

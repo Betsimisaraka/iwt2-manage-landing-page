@@ -1,0 +1,23 @@
+@import "variables";
+
+.masthead {
+    background-image: url('../images/illustration-intro.svg');
+    padding-top: 400px;
+    background-image: url(../images/illustration-intro.svg), 
+                        url('../images/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: contain, 450px;
+    background-position: 50% 30%, -38% -10%;
+}
+
+.masthead_heading {
+    @include bg_heading;
+    padding-top: 100px;
+}
+
+.masthead_paragraph {
+    @include sh_paragraph;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+

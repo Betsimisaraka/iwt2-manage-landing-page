@@ -1,12 +1,13 @@
+
 :root {
-    // --body-background: #{$body-background-color};
-    // --bg-heading-color: #{$bg-heading-color};
+    --body-background: #{$background_color};
+    --bg-heading-color: #{$footer_bg_color};
     // --site-header-background: #{$site-header-background-color};
-    // --sub-heading-color: #{$base-color};
-    // --updates-background: #{$updates-color};
+    --paragraph-color: #{$bg_color};
+    --button-background: #{$button_color};
     // --opacity-color: #{$base-color-opacity};
-    --base-font-size: #{$default-font-size};
-    --base-line-height: #{$base-line-height};
+    // --base-font-size: #{$default-font-size};
+    // --base-line-height: #{$base-line-height};
     // --base-padding: #{$base_padding};
     // --base-margin: #{$base_margin};
   }

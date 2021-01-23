@@ -1,3 +1,23 @@
 html {
-    background-color: aqua;
+    font-family: $font-stack;
+    font-size: $base-line-height;
+}
+
+body {
+    background-color: var(--body-background);
+    text-align: center;
+}
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    @include button;
+}
+
+.container {
+    margin-left: 15px;
+    margin-right: 15px;
 }
