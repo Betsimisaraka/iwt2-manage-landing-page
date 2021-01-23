@@ -1,0 +1,11 @@
+.article_testimonials {
+    & h3 {
+        @include article_heading;
+    } 
+    & ul li p {
+        @include sh_paragraph;
+    }
+    & ul li h4 {
+        @include list_heading;
+    }
+}
