@@ -1,9 +1,11 @@
 .site_header {
     position: absolute;
-    // display: flex;
-    // flex-direction: row;
-    // align-items: center;
-    // justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 h1 {
@@ -16,6 +18,7 @@ h1 {
     width: 200px;
     display: block;
     text-indent: -9999px;
+    align-items: center;
 }
 
 .site_header__menu {
@@ -26,17 +29,22 @@ h1 {
     text-indent: -9999px;
     position: absolute;
     top: 20%;
-    left: 190%;
+    left: 80%;
     width: 2rem;
     height: 2rem;
 }
 
 .site_header__button {
     display: none;
+    align-items: center;
 }
 
 .navigation {
     transform: translate(-200px);
+    align-items: center;
+    & ul li a {
+        @include link-font;
+    }
 }
 
 body > input[type="checkbox"] {
@@ -48,5 +56,44 @@ body > input[type="checkbox"] {
 
 body > input[type="checkbox"]:checked ~ header .navigation {
     transform: translate(0%);
+}
+
+@media (min-width: 1000px) {
+    .site_header {
+        margin-left: 100px;
+        margin-right: 100px;
+        max-width: 1170px;
+        padding-top: 22px;
+    }
+        h1 {
+            position: unset;
+            top: unset;
+            left: unset;
+        }
+    .site_header__menu {
+        display: none;
+    }
+    .navigation {
+        position: unset;
+        top: unset;
+        left: unset;
+        transform: unset;
+        & ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            li a:hover {
+                color: hsl(233, 26%, 24%);
+            }
+        }
+        & ul li + li {
+            padding-top: unset;
+            margin-left: 50px;
+        }
+    }
+    .site_header__button {
+        display: block;
+    }
 }
 

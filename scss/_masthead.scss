@@ -21,3 +21,32 @@
     padding-bottom: 50px;
 }
 
+@media (min-width: 1000px) {
+    .masthead {
+        // background-image: url(../img/mastheader.png);
+        // background-repeat: no-repeat;
+        // background-size: 70%;
+        padding-bottom: 100px;
+        padding-top: unset;
+        background-size: 400px, 40%;
+        background-position:calc(50% + 411px) 63%, calc(53% + 499px) -280%;
+      }
+
+    //   .container {
+    //     max-width: 1000px;
+    //     max-height: 100%;
+    //     margin-left: auto;
+    //     margin-right: auto;
+    //   }
+    
+      .masthead_container {
+        // padding-top: 164px;
+        // padding-bottom: $base_padding;
+        max-width: 400px;
+        text-align: start;
+        margin-left: 100px;
+      }
+    .masthead_heading {
+        padding-top: 200px;
+    }
+}

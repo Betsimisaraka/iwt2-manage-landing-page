@@ -16,8 +16,15 @@ body, h1, h2, p {
   margin: 0;
   padding: 0; }
 
+ul {
+  list-style: none; }
+
+ul li a {
+  text-decoration: none; }
+
 .button {
   border-radius: 50px;
+  font-family: "Be Vietnam";
   color: var(--body-background);
   font-style: normal;
   font-weight: 400;
@@ -32,7 +39,13 @@ body, h1, h2, p {
   margin-right: 15px; }
 
 .site_header {
-  position: absolute; }
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%; }
 
 h1 {
   position: absolute;
@@ -43,7 +56,8 @@ h1 {
   background-position: center;
   width: 200px;
   display: block;
-  text-indent: -9999px; }
+  text-indent: -9999px;
+  align-items: center; }
 
 .site_header__menu {
   background-image: url("../images/icon-hamburger.svg");
@@ -53,15 +67,24 @@ h1 {
   text-indent: -9999px;
   position: absolute;
   top: 20%;
-  left: 190%;
+  left: 80%;
   width: 2rem;
   height: 2rem; }
 
 .site_header__button {
-  display: none; }
+  display: none;
+  align-items: center; }
 
 .navigation {
-  transform: translate(-200px); }
+  transform: translate(-200px);
+  align-items: center; }
+  .navigation ul li a {
+    font-family: "Be Vietnam";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: var(--bg-heading-color); }
 
 body > input[type="checkbox"] {
   position: absolute;
@@ -71,6 +94,36 @@ body > input[type="checkbox"] {
 
 body > input[type="checkbox"]:checked ~ header .navigation {
   transform: translate(0%); }
+
+@media (min-width: 1000px) {
+  .site_header {
+    margin-left: 100px;
+    margin-right: 100px;
+    max-width: 1170px;
+    padding-top: 22px; }
+  h1 {
+    position: unset;
+    top: unset;
+    left: unset; }
+  .site_header__menu {
+    display: none; }
+  .navigation {
+    position: unset;
+    top: unset;
+    left: unset;
+    transform: unset; }
+    .navigation ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      .navigation ul li a:hover {
+        color: #2d314d; }
+    .navigation ul li + li {
+      padding-top: unset;
+      margin-left: 50px; }
+  .site_header__button {
+    display: block; } }
 
 :root {
   --body-background: #fafafa;
@@ -104,3 +157,16 @@ body > input[type="checkbox"]:checked ~ header .navigation {
   color: var(--paragraph-color);
   padding-top: 20px;
   padding-bottom: 50px; }
+
+@media (min-width: 1000px) {
+  .masthead {
+    padding-bottom: 100px;
+    padding-top: unset;
+    background-size: 400px, 40%;
+    background-position: calc(50% + 411px) 63%, calc(53% + 499px) -280%; }
+  .masthead_container {
+    max-width: 400px;
+    text-align: start;
+    margin-left: 100px; }
+  .masthead_heading {
+    padding-top: 200px; } }
