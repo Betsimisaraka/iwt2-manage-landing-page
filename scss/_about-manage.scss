@@ -1,0 +1,53 @@
+.article_about__heading {
+    @include article_heading;
+}
+
+.article_about__paragraph {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.article_about__paragraph,
+.article_about__lists li p {
+    @include sh_paragraph;
+}
+
+.article_about__lists li h4 {
+    @include list_heading;
+}
+
+.article_about__lists li div {
+    display: flex;
+    flex-direction: row;
+    background-color: $image_color;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.article_about__lists li + li {
+    margin-top: 50px;
+}
+
+@media (min-width: 1000px) {
+    .article_about__container {
+        margin-left: 100px;
+        margin-right: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: start;
+    }
+    .article_about__lists {
+        margin-left: 100px;
+    }
+    .article_about__lists li div {
+        background-color: unset;
+        margin-bottom: 15px;
+    }
+    .article_about__lists li div h4 {
+        padding-left: 32px;
+    }
+    .article_about__lists li p {
+        padding-left: 130px;
+    }
+}

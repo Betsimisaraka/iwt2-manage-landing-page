@@ -12,7 +12,7 @@ body {
   background-color: var(--body-background);
   text-align: center; }
 
-body, h1, h2, p {
+body, h1, h2, h3, h4, ul, p {
   margin: 0;
   padding: 0; }
 
@@ -137,7 +137,8 @@ body > input[type="checkbox"]:checked ~ header .navigation {
   background-image: url(../images/illustration-intro.svg), url("../images/bg-tablet-pattern.svg");
   background-repeat: no-repeat;
   background-size: contain, 450px;
-  background-position: 50% 30%, -38% -10%; }
+  background-position: 50% 30%, -38% -10%;
+  margin-bottom: 150px; }
 
 .masthead_heading {
   font-family: "Be Vietnam";
@@ -153,7 +154,7 @@ body > input[type="checkbox"]:checked ~ header .navigation {
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 28px;
   color: var(--paragraph-color);
   padding-top: 20px;
   padding-bottom: 50px; }
@@ -163,10 +164,68 @@ body > input[type="checkbox"]:checked ~ header .navigation {
     padding-bottom: 100px;
     padding-top: unset;
     background-size: 400px, 40%;
-    background-position: calc(50% + 411px) 63%, calc(53% + 499px) -280%; }
+    background-position: calc(50% + 411px) 63%, calc(53% + 499px) -280%;
+    margin-bottom: unset; }
   .masthead_container {
     max-width: 400px;
     text-align: start;
     margin-left: 100px; }
   .masthead_heading {
     padding-top: 200px; } }
+
+.article_about__heading {
+  font-family: "Be Vietnam";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 48px;
+  color: var(--bg-heading-color); }
+
+.article_about__paragraph {
+  padding-top: 20px;
+  padding-bottom: 50px; }
+
+.article_about__paragraph,
+.article_about__lists li p {
+  font-family: "Be Vietnam";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--paragraph-color); }
+
+.article_about__lists li h4 {
+  font-family: "Be Vietnam";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: var(--bg-heading-color); }
+
+.article_about__lists li div {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffefeb;
+  align-items: center;
+  margin-bottom: 10px; }
+
+.article_about__lists li + li {
+  margin-top: 50px; }
+
+@media (min-width: 1000px) {
+  .article_about__container {
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start; }
+  .article_about__lists {
+    margin-left: 100px; }
+  .article_about__lists li div {
+    background-color: unset;
+    margin-bottom: 15px; }
+  .article_about__lists li div h4 {
+    padding-left: 32px; }
+  .article_about__lists li p {
+    padding-left: 130px; } }
