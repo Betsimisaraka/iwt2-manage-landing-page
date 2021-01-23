@@ -7,9 +7,20 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-   <input type="checkbox">
-   <header>
-       <h1>Logo</h1>
+   <input type="checkbox" id="menu">
+   <header class="site_header">
+       <h1 class="site_header__heading"><a href="/manage">Manage</a></h1>
+       <label for="menu">Menu</label>
+       <nav class="navigation">
+           <ul class="navigation_lists">
+               <li class="navigation_lists__items"><a href="/pricing">Pricing  </a></li>
+               <li class="navigation_lists__items"><a href="/product"> Product</a></li>
+               <li class="navigation_lists__items"><a href="/about-us">About Us</a></li>
+               <li class="navigation_lists__items"><a href="/careers">Careers</a></li>
+               <li class="navigation_lists__items"><a href="/community">Community</a></li>
+           </ul>
+       </nav>
+       <button class="button site_header__button">Get Started</button>
    </header>
 </body>
 </html>
