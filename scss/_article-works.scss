@@ -1,12 +1,8 @@
 .article_works {
     background-color: var(--button-background);
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
 }
 
-.article_works h4 {
+.article_works__conainer h4 {
     font-family: $default-font;
     font-style: normal;
     font-weight: 700;
@@ -15,7 +11,8 @@
     color: white;
 }
 
-.article_works button {
+
+.article_works__conainer button {
     background-color: white;
     border-radius: 50px;
     font-family: $default-font;
@@ -24,13 +21,13 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    margin-top: 32px;
+    // margin-top: 32px;
     border: none;
     padding: 18px 40px;
 }
 
 @media (min-width: 1000px) {
-    .article_works {
+    .article_works__conainer {
         padding-top: 50px;
         padding-bottom: 50px;
         display: flex;
@@ -38,12 +35,12 @@
         justify-content: space-between;
         align-items: center;
     }
-    .article_works h4 {
-        margin-left: 100px;
+    .article_works__conainer h4 {
+        // margin-left: 100px;
         max-width: 400px;
         text-align: start;
     }
-    .article_works button {
-        margin-right: 100px;
-    }
+    // .article_works button {
+    //     margin-right: 100px;
+    // }
 }

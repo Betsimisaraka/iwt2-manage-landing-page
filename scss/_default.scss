@@ -29,3 +29,11 @@ ul li a {
     margin-left: 15px;
     margin-right: 15px;
 }
+
+@media (min-width: 1000px) {
+    .container {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
