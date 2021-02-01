@@ -1,5 +1,7 @@
 .article_works {
     background-color: var(--button-background);
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .article_works__conainer h4 {
@@ -27,6 +29,10 @@
 }
 
 @media (min-width: 1000px) {
+    .article_works {
+        padding-top: unset;
+        padding-bottom: unset;
+    }
     .article_works__conainer {
         padding-top: 50px;
         padding-bottom: 50px;
@@ -36,11 +42,7 @@
         align-items: center;
     }
     .article_works__conainer h4 {
-        // margin-left: 100px;
         max-width: 400px;
         text-align: start;
     }
-    // .article_works button {
-    //     margin-right: 100px;
-    // }
 }

@@ -57,6 +57,7 @@ h5 a {
     text-indent: -9999px;
     background-repeat: no-repeat;
     background-position: center;
+    height: 40px;
     width: 40px;
     background-size: 1.5rem;
 }
@@ -113,10 +114,11 @@ footer input[type="text"] {
     padding-bottom: 15px;
     padding-left: 22px;
     padding-right: 40px;
+    border: none;
 }
 
 .footer_button {
-    padding: 15px 35px;
+    padding: 13px 24px;
 }
 
 footer p {
@@ -146,6 +148,7 @@ footer p {
             align-self: end;
             & li a {
                 background-size: unset;
+                height: unset;
             }
         }
         .footer_menu {
@@ -158,6 +161,14 @@ footer p {
             grid-column: 7 / 10;
             align-self: flex-start;
         }
+        & p {
+            grid-column: 7 / 10;
+            grid-row: 2 / 3;
+            align-self: end;
+            text-align: right;
+        }
     }
-
+    footer {
+        padding-bottom: 52px;
+    }
 }
