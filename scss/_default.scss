@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background-color: var(--body-background);
+    background-color: white;
     text-align: center;
 }
 
@@ -21,9 +21,15 @@ ul li a {
     text-decoration: none
 }
 
+button {
+    cursor: pointer;
+}
+
 .button {
     @include button;
 }
+
+
 
 .container {
     margin-left: 15px;

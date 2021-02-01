@@ -9,7 +9,7 @@ html {
   font-size: 24px; }
 
 body {
-  background-color: var(--body-background);
+  background-color: white;
   text-align: center; }
 
 body, h1, h2, h3, h4, ul, p {
@@ -21,6 +21,9 @@ ul {
 
 ul li a {
   text-decoration: none; }
+
+button {
+  cursor: pointer; }
 
 .button {
   border-radius: 50px;
@@ -236,29 +239,67 @@ body > input[type="checkbox"]:checked ~ header .navigation {
   .article_about__lists li p {
     padding-left: 130px; } }
 
-.article_testimonials h3 {
-  font-family: "Be Vietnam";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 34px;
-  line-height: 48px;
-  color: var(--bg-heading-color); }
+.article_testimonials {
+  padding-top: 62px;
+  padding-bottom: 50px; }
+  .article_testimonials h3 {
+    font-family: "Be Vietnam";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 48px;
+    color: var(--bg-heading-color);
+    padding-bottom: 50px; }
+  .article_testimonials ul li + li {
+    margin-top: 50px; }
+  .article_testimonials ul li {
+    background-color: var(--body-background);
+    padding-right: 22px;
+    padding-left: 22px; }
+    .article_testimonials ul li img {
+      width: 70px;
+      height: 70px;
+      margin-top: -35px; }
+    .article_testimonials ul li h4 {
+      font-family: "Be Vietnam";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 22px;
+      color: var(--bg-heading-color);
+      padding-top: 32px;
+      padding-bottom: 22px; }
+    .article_testimonials ul li p {
+      font-family: "Be Vietnam";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      color: var(--paragraph-color);
+      padding-bottom: 32px; }
+  .article_testimonials .article_testimonials__buttons button {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--button-background);
+    background-color: unset;
+    border-radius: 50%;
+    outline: none; }
+  .article_testimonials .article_testimonials__buttons button:active {
+    background-color: var(--button-background); }
+  .article_testimonials .article_testimonials__button {
+    margin-top: 50px; }
 
-.article_testimonials ul li p {
-  font-family: "Be Vietnam";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: var(--paragraph-color); }
-
-.article_testimonials ul li h4 {
-  font-family: "Be Vietnam";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  color: var(--bg-heading-color); }
+@media (min-width: 1000px) {
+  .article_testimonials ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start; }
+    .article_testimonials ul li + li {
+      margin-top: unset;
+      margin-left: 22px; }
+  .article_testimonials .article_testimonials__buttons {
+    display: none; } }
 
 .article_works {
   background-color: var(--button-background);
