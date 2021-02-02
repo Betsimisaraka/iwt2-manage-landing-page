@@ -31,12 +31,14 @@
 
 @media (min-width: 1000px) {
     .article_about__container {
-        margin-left: 100px;
-        margin-right: 100px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         text-align: start;
+    }
+    .article_about__heading {
+        font-size: 38px;
+        line-height: 54px;
     }
     .article_about__lists {
         margin-left: 100px;
