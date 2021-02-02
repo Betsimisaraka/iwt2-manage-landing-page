@@ -117,8 +117,9 @@ footer input[type="text"] {
     border: none;
 }
 
-.footer_button {
-    padding: 13px 24px;
+.footer_button:active,
+.footer_button:hover {
+    opacity: 0.8;
 }
 
 footer p {

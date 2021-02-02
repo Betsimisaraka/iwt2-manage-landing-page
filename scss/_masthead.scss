@@ -1,19 +1,20 @@
 @import "variables";
 
 .masthead {
-    background-image: url('../images/illustration-intro.svg');
-    padding-top: 400px;
-    background-image: url(../images/illustration-intro.svg), 
-                        url('../images/bg-tablet-pattern.svg');
+    background-image: url('../images/bg-tablet-pattern.svg'), url('../images/bg-tablet-pattern.svg');
     background-repeat: no-repeat;
-    background-size: contain, 450px;
-    background-position: 50% 30%, -38% -10%;
-    margin-bottom: 150px;
+    background-size: 100%, 100%;
+    background-position: calc(100% - -83px) -5%, calc(0% - -220px) 100%;;
+    padding-bottom: 150px;
+    padding-top: 122px;
+    & img {
+        width: 100%;
+    }
 }
 
 .masthead_heading {
     @include bg_heading;
-    padding-top: 100px;
+    padding-top: 42px;
 }
 
 .masthead_paragraph {
@@ -26,8 +27,8 @@
     .masthead {
         padding-bottom: 100px;
         padding-top: unset;
-        background-size: 400px, 40%;
-        background-position:calc(50% + 411px) 63%, calc(53% + 499px) -280%;
+        background-size: 400px;
+        background-position: calc(53% + 499px) -280%;
         margin-bottom: unset;
       }
     

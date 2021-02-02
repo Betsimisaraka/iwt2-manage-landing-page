@@ -26,10 +26,30 @@ button {
 }
 
 .button {
+    color: var(--body-background);
+    background-color: var(--button-background);
     @include button;
 }
 
+.button_small {
+    padding: 13px 24px;
+}
 
+.masthead_button, 
+.article_testimonials__button,
+.site_header__button {
+    box-shadow: 0px 10px 5px $image_color;
+}
+
+.site_header__button:active,
+.site_header__button:hover,
+.masthead_button:active,
+.masthead_button:hover, 
+.article_testimonials__button:active,
+.article_testimonials__button:hover {
+    box-shadow: 0px 15px 5px $image_color;
+    opacity: 0.8;
+}
 
 .container {
     margin-left: 15px;

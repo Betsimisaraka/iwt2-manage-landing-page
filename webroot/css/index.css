@@ -26,16 +26,33 @@ button {
   cursor: pointer; }
 
 .button {
+  color: var(--body-background);
+  background-color: var(--button-background);
   border-radius: 50px;
   font-family: "Be Vietnam";
-  color: var(--body-background);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  background-color: var(--button-background);
   border: none;
   padding: 18px 40px; }
+
+.button_small {
+  padding: 13px 24px; }
+
+.masthead_button,
+.article_testimonials__button,
+.site_header__button {
+  box-shadow: 0px 10px 5px #ffefeb; }
+
+.site_header__button:active,
+.site_header__button:hover,
+.masthead_button:active,
+.masthead_button:hover,
+.article_testimonials__button:active,
+.article_testimonials__button:hover {
+  box-shadow: 0px 15px 5px #ffefeb;
+  opacity: 0.8; }
 
 .container {
   margin-left: 15px;
@@ -141,13 +158,14 @@ body > input[type="checkbox"]:checked ~ header .navigation {
   --button-background: #f25f3a; }
 
 .masthead {
-  background-image: url("../images/illustration-intro.svg");
-  padding-top: 400px;
-  background-image: url(../images/illustration-intro.svg), url("../images/bg-tablet-pattern.svg");
+  background-image: url("../images/bg-tablet-pattern.svg"), url("../images/bg-tablet-pattern.svg");
   background-repeat: no-repeat;
-  background-size: contain, 450px;
-  background-position: 50% 30%, -38% -10%;
-  margin-bottom: 150px; }
+  background-size: 100%, 100%;
+  background-position: calc(100% - -83px) -5%, calc(0% - -220px) 100%;
+  padding-bottom: 150px;
+  padding-top: 122px; }
+  .masthead img {
+    width: 100%; }
 
 .masthead_heading {
   font-family: "Be Vietnam";
@@ -156,7 +174,7 @@ body > input[type="checkbox"]:checked ~ header .navigation {
   font-size: 34px;
   line-height: 48px;
   color: var(--bg-heading-color);
-  padding-top: 100px; }
+  padding-top: 42px; }
 
 .masthead_paragraph {
   font-family: "Be Vietnam";
@@ -172,8 +190,8 @@ body > input[type="checkbox"]:checked ~ header .navigation {
   .masthead {
     padding-bottom: 100px;
     padding-top: unset;
-    background-size: 400px, 40%;
-    background-position: calc(50% + 411px) 63%, calc(53% + 499px) -280%;
+    background-size: 400px;
+    background-position: calc(53% + 499px) -280%;
     margin-bottom: unset; }
   .masthead_container {
     max-width: 400px;
@@ -209,7 +227,8 @@ body > input[type="checkbox"]:checked ~ header .navigation {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-  color: var(--bg-heading-color); }
+  color: var(--bg-heading-color);
+  padding-left: 10px; }
 
 .article_about__lists li div {
   display: flex;
@@ -314,17 +333,14 @@ body > input[type="checkbox"]:checked ~ header .navigation {
   line-height: 48px;
   color: white; }
 
-.article_works__conainer button {
+.article_works__button {
   background-color: white;
-  border-radius: 50px;
-  font-family: "Be Vietnam";
   color: var(--button-background);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  border: none;
-  padding: 18px 40px; }
+  box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.1); }
+
+.article_works__button:active,
+.article_works__button:hover {
+  opacity: 0.9; }
 
 @media (min-width: 1000px) {
   .article_works {
@@ -445,8 +461,9 @@ footer input[type="text"] {
   padding-right: 40px;
   border: none; }
 
-.footer_button {
-  padding: 13px 24px; }
+.footer_button:active,
+.footer_button:hover {
+  opacity: 0.8; }
 
 footer p {
   font-size: 18px;
