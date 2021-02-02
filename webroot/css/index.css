@@ -70,13 +70,13 @@ button {
     margin-right: auto; } }
 
 .site_header {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%; }
+  top: 25px; }
 
 h1 {
   position: absolute;
@@ -88,7 +88,8 @@ h1 {
   width: 200px;
   display: block;
   text-indent: -9999px;
-  align-items: center; }
+  align-items: center;
+  z-index: 1; }
 
 .site_header__menu {
   background-image: url("../images/icon-hamburger.svg");
@@ -98,9 +99,10 @@ h1 {
   text-indent: -9999px;
   position: absolute;
   top: 20%;
-  left: 80%;
+  left: 86%;
   width: 2rem;
-  height: 2rem; }
+  height: 2rem;
+  z-index: 1; }
 
 .site_header__button {
   display: none;
@@ -108,13 +110,21 @@ h1 {
 
 .navigation {
   transform: translate(-200px);
-  align-items: center; }
+  position: absolute;
+  top: 20%;
+  left: 10%; }
+  .navigation ul {
+    text-align: center; }
+    .navigation ul li a:hover, .navigation ul li :active {
+      color: var(--paragraph-color); }
+    .navigation ul li + li {
+      margin-top: 32px; }
   .navigation ul li a {
     font-family: "Be Vietnam";
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 24px;
     color: var(--bg-heading-color); }
 
 body > input[type="checkbox"] {
@@ -124,21 +134,44 @@ body > input[type="checkbox"] {
   visibility: hidden; }
 
 body > input[type="checkbox"]:checked ~ header .navigation {
-  transform: translate(0%); }
+  transform: translate(0%);
+  background-image: linear-gradient(180deg, rgba(243, 244, 246, 0.2) 0%, rgba(36, 45, 82, 0.5) 50%);
+  top: -25px;
+  left: 0%;
+  background-color: rgba(150, 152, 166, 0.2);
+  height: 100vh;
+  width: 100%;
+  padding-top: 100px; }
+
+body > input[type="checkbox"]:checked ~ header .navigation ul {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 32px 0px;
+  margin-left: 20px;
+  margin-right: 20px; }
+
+body > input[type="checkbox"]:checked ~ header .site_header__menu {
+  background-image: url("../images/icon-close.svg");
+  background-size: 1,5rem;
+  z-index: 1; }
 
 @media (min-width: 1000px) {
   .site_header {
+    position: unset;
+    top: unset;
     position: absolute;
     z-index: 1;
     margin-left: 122px;
     margin-right: 122px;
     max-width: 1100px;
-    padding-top: 42px; }
+    padding-top: 42px;
+    width: 100%; }
   h1 {
     position: unset;
     top: unset;
     left: unset;
-    width: 150px; }
+    width: 150px;
+    z-index: unset; }
   .site_header__menu {
     display: none; }
   .navigation {
@@ -151,11 +184,10 @@ body > input[type="checkbox"]:checked ~ header .navigation {
       flex-direction: row;
       justify-content: space-between;
       align-items: center; }
-      .navigation ul li a:hover {
-        color: #2d314d; }
     .navigation ul li + li {
       padding-top: unset;
-      margin-left: 50px; }
+      margin-left: 50px;
+      margin-top: unset; }
   .site_header__button {
     display: block; } }
 
@@ -169,7 +201,7 @@ body > input[type="checkbox"]:checked ~ header .navigation {
   background-image: url("../images/bg-tablet-pattern.svg"), url("../images/bg-tablet-pattern.svg");
   background-repeat: no-repeat;
   background-size: 100%, 100%;
-  background-position: calc(100% - -83px) -5%, calc(0% - -220px) 100%;
+  background-position: calc(100% - -60px) -2%, calc(0% - -220px) 100%;
   padding-bottom: 150px;
   padding-top: 122px; }
   .masthead img {
