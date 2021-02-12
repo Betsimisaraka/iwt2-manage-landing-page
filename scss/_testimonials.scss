@@ -5,13 +5,8 @@
         @include article_heading;
         padding-bottom: 50px;
     } 
-    // & ul li:nth-child(2), ul li:nth-child(3), ul li:nth-child(4) {
-    //     display: none;
-    // }
-    & ul li + li {
-        margin-top: 50px;
-    }
-    & ul li {
+   
+    & .slideshow-container .slides {
         background-color: var(--body-background);
         padding-right: 22px;
         padding-left: 22px;
@@ -30,40 +25,48 @@
             padding-bottom: 32px;
         }
     }
-    & .article_testimonials__buttons button {
-        width: 10px;
-        height: 10px;
-        border: 1px solid var(--button-background);
-        background-color: unset;
-        border-radius: 50%;
-        outline: none;
-    }
-    & .article_testimonials__buttons button:active {
-        background-color: var(--button-background);
-        // outline: none;
-    }
     & .article_testimonials__button {
         margin-top: 50px;
     }
 }
 
+.article_testimonials__buttons .testimonials {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--button-background);
+    background-color: unset;
+    border-radius: 50%;
+    outline: none;
+}
+
+.testimonials.active, .testimonials:hover {
+    background-color: var(--button-background);
+  }
+
+  .slideshow-container .slides {
+      display: none;
+  }
+
+  .testimonials {
+      display: inline-block;
+  }
+
+  .slideshow-container .prev, .slideshow-container .next {
+      display: none;
+  }
+
 @media (min-width: 1000px) {
     .article_testimonials {
-        & ul {
+        & .slideshow-container {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-start;
-            // & li:last-child {
-            //     display: none;
-            // }
-            & li + li {
+            position: relative;
+            & .slides + .slides {
                 margin-top: unset;
                 margin-left: 22px;
             }
-            // & li:nth-child(2), li:nth-child(3), li:nth-child(4) {
-            //     display: block;
-            // }
         }
         & .article_testimonials__buttons {
             display: none;
@@ -73,4 +76,20 @@
             line-height: 54px;
         }
     } 
+    .slideshow-container .prev, .slideshow-container .next {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        color: var(--button-background);
+        border: none;
+        background-color: transparent;
+    }
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+    .slideshow-container .slides {
+        display: block;
+    }
 }

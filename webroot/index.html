@@ -96,8 +96,8 @@
             <article class="article_testimonials">
                 <div class="article_testimonials__container">
                     <h3>What they've said</h3>
-                    <ul>
-                        <li>
+                    <div class="slideshow-container">
+                        <div class="slides">
                             <img src="./images/avatar-anisha.png" alt="Anisha Li">
                             <h4>Anisha Li</h4>
                             <p>
@@ -106,8 +106,8 @@
                                 at all times keeps everyone
                                 motivated.”
                             </p>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="slides">
                             <img src="./images/avatar-ali.png" alt="Ali Bravo">
                             <h4>Ali Bravo</h4>
                             <p>
@@ -116,8 +116,8 @@
                                 cross-channel confusion
                                 and everyone is much more focused.”
                             </p>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="slides">
                             <img src="./images/avatar-richard.png" alt="Richard Watts">
                             <h4>Richard Watts</h4>
                             <p>
@@ -125,8 +125,8 @@
                                 It keeps us organized and focused. I can’t
                                 stop recommending them to everyone I talk to!”
                             </p>
-                        </li>
-                        <li>
+                        </div>
+                        <div class="slides">
                             <img src="./images/avatar-shanai.png" alt="Shanai Gough">
                             <h4>Shanai Gough</h4>
                             <p>
@@ -135,13 +135,15 @@
                                 keeps the whole team in-sync without being
                                 intrusive.”
                             </p>
-                        </li>
-                    </ul>
+                        </div>
+                        <button class="prev"><</button>
+                        <button class="next">></button>
+                    </div>
                     <div class="article_testimonials__buttons">
-                        <button class="testimonials1"></button>
-                        <button class="testimonials2"></button>
-                        <button class="testimonials3"></button>
-                        <button class="testimonials4"></button>
+                        <button class="testimonials" onclick="currentSlides(1)"></button>
+                        <button class="testimonials" onclick="currentSlides(2)"></button>
+                        <button class="testimonials" onclick="currentSlides(3)"></button>
+                        <button class="testimonials" onclick="currentSlides(4)"></button>
                     </div>
                     <button class="button article_testimonials__button">Get started</button>
                 </div>
